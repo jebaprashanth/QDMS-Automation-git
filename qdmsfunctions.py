@@ -42,7 +42,7 @@ def add_equipment(equipmentName, equipmentType, description=None):
 
     wait.until(EC.presence_of_element_located((By.XPATH, add_equipment_saveButton_xpath))).click()
 
-    # close_the_notifications()
+    close_the_notifications()
 
 def close_the_notifications():
     wait.until(EC.presence_of_element_located((By.XPATH, notifications_close_button))).click()
