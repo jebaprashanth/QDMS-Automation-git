@@ -23,4 +23,4 @@ def add_plant(equipmentName=None):
 login('admin', 'tokyo@admin')
 navigate_master_module()
 navigate_plant_module()
-add_plant('OTHER')
+add_plant('Checking SBU')
