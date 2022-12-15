@@ -18,9 +18,10 @@ def add_plant(equipmentName=None):
     wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="sub_business_unit"]'))).click()
     time.sleep(1)
 
-    wait.until(EC.presence_of_element_located((By.XPATH, "//*[contains(text(), '" + equipmentName + "')]"))).click()
+    wait.until(EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'ant-select-item-option-content') and contains(.//span, '" + equipmentName + "')]"))).click()
+
 
 login('admin', 'tokyo@admin')
 navigate_master_module()
 navigate_plant_module()
-add_plant('Checking SBU')
+add_plant('RMC')
