@@ -9,11 +9,12 @@ add_plant_xpath = '//*[@id="addPlant"]'
 def navigate_plant_module():
     wait.until(EC.presence_of_element_located((By.XPATH, plant_navigate_xpath))).click()
 
+# Selecting a drop down based on string value
+
 def add_plant(equipmentName=None):
     wait.until(EC.presence_of_element_located((By.XPATH, add_plant_xpath))).click() 
     time.sleep(2)
-    value = ''
-    i = 1
+
     wait.until(EC.presence_of_element_located((By.XPATH, '//*[@id="sub_business_unit"]'))).click()
     time.sleep(1)
 
